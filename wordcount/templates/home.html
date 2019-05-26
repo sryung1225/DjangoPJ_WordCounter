@@ -1,9 +1,33 @@
-<h1> 안녕하세요, 여기에서 열심히 글자를 세세요! </h1>
-
-<a href="{%url 'about'%}">ABOUT</a>
-
-<form action="{%url 'result'%}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type="submit" value="Count!">
-</form>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="grid" style="padding:20px 0;">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{%url 'home'%}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="{%url 'about'%}">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <br>
+                <h2> 이 글은 몇개의 글자를 가졌을까요? </h2>
+                <br>
+            </div>
+            <form action="{%url 'result'%}">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">텍스트를 입력해주세요!</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="fulltext" rows="5">병아리가 삐약 삐약 '<'</textarea>
+                        <br>
+                    <input type="submit" class="btn btn-warning text-white btn-lg btn-block" value="Count!">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

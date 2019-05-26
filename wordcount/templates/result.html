@@ -1,17 +1,45 @@
-<h1>당신이 입력한 텍스트는
-    <!--총 단어 수-->
-    {{total}}
-    로 구성되어 있습니다.</h1>
-
-<a href="{%url 'home'%}">다시 하기</a>
-<br>
-<h2> 입력한 텍스트 :</h2>
-<!--입력받은 전체 텍스트-->
-{{full}}
-
-<h2> 단어 카운트 :</h2>
-<!--'단어' - '단어가 나온 횟수'-->
-{% for word, howmany in dictionary%}
-{{word}} : {{howmany}}
-<br>
-{%endfor%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="grid" style="padding:20px 0;">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="{%url 'home'%}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="{%url 'about'%}">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <br>
+                <h2>텍스트는 <span style="color:orange;">{{total}}</span>개의 단어로 구성되어 있습니다!</h2>
+                <br>
+            </div>
+            <div class="form-group">
+                <div clss="full-text">
+                    <br>
+                    <h3>입력한 텍스트</h3>
+                    <span style="color:orange;">{{full}}</span>
+                </div>
+                <br>
+                <div class="count-text">
+                    <br>
+                    <h3>단어 : 갯수</h3>
+                    <span style="color:orange;">
+                    {% for word, howmany in dictionary%}
+                    {{word}} : {{howmany}}
+                    <br>
+                    {%endfor%}
+                    </span>
+                    <br>
+                    <a class="btn btn-warning text-white btn-lg btn-block" href="{%url 'home'%}" role="button">다시하기</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

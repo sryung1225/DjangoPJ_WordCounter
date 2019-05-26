@@ -1,5 +1,32 @@
-<h1>About</h1>
-
-<p>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자처럼의 워드카운트 웹페이지입니다. 여기에서 글자를 세세요.</p>
-
-<a href="{%url 'home'%}">Home으로 돌아가기</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="grid" style="padding:20px 0;">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="{%url 'home'%}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{%url 'about'%}">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <br>
+                <p>안녕하세요, 이곳은 멋쟁이사자처럼에 제출하기 위해 작성된 페이지입니다.</p>
+                <p>특정 단어의 검색결과만 알도록 페이지를 수정하고 싶은데(ex. 링 딩동 링 딩동 링 디기 딩 => '딩동':2)
+                    <br>파이썬으로는 구현을 성공했으나 아직 장고 사용이 미숙해 미완성입니다:(</p>
+                <p>시간 될 때 더 수정해보겠습니다ㅠㅠ 그런 이유로 이건 CSS만 수정한 버전입니다!</p>
+                <br>
+                <p>개발자의 멋쟁이과제처럼 1차 과제를 보고 싶다면
+                    <a href="https://sryung1225.github.io/" style="color:orange; text-decoration:none;">클릭!</a>
+                    <br><span style="text-decoration:line-through;">(크롬에서 정상적으로 보입니다)</span>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
