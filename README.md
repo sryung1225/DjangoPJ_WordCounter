@@ -18,11 +18,11 @@ django를 이용한 기초 소규모 프로젝트입니다. <br>
 <br>
 
 ## 2. 사진
-![ex_screenshot](./img/wordcount-1.jpg) <br>
+![ex_screenshot](./img/wordcount-1.JPG) <br>
 → 메인 페이지 : 사용자가 텍스트를 입력
 
-![ex_screenshot](./img/wordcount-2.jpg) <br>
+![ex_screenshot](./img/wordcount-2.JPG) <br>
 → 결과 페이지 : 입력된 텍스트의 단어 갯수 분석
 
-![ex_screenshot](./img/wordcount-3.jpg) <br>
+![ex_screenshot](./img/wordcount-3.JPG) <br>
 → 설명 페이지 : 프로젝트를 설명하는 페이지 (미완)
